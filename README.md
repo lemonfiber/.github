@@ -22,5 +22,12 @@ Changing any of these is a governed change like any other — cite a spec identi
 
 ---
 
-Created and maintained by **[NightWorks.io](https://nightworks.io)** ·
-[Discord](https://discord.gg/daQmY23ym)
+<p align="center">
+  <a href="https://nightworks.io">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/nightworks-white.png">
+      <img alt="NightWorks.io" src=".github/nightworks-dark.png" height="20">
+    </picture>
+  </a>
+  &nbsp;&middot;&nbsp;<a href="https://discord.gg/daQmY23ym">Discord</a>
+</p>
