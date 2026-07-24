@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">Your media stack, without the weekend</h1>
+<h1 align="center">Self-host your media &mdash; without becoming a sysadmin</h1>
 
 <p align="center">
   A fully open-source, self-hosted media automation stack &mdash; that sets
@@ -108,7 +108,7 @@ line is written. Watch it come together, or help build it.
 | | |
 |---|---|
 | **[spec](https://github.com/lemonfiber/spec)** | The canonical specification — everything starts here |
-| **[cli](https://github.com/lemonfiber/cli)** | The `lemonfiber` binary (Rust) |
+| **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` binary (Rust) |
 | **[media-stack](https://github.com/lemonfiber/media-stack)** | The Compose stack it orchestrates |
 | **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type |
 | **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
@@ -122,5 +122,5 @@ line is written. Watch it come together, or help build it.
       <img alt="NightWorks.io" src="../.github/nightworks-dark.png" height="20">
     </picture>
   </a>
-  &nbsp;&middot;&nbsp;<a href="https://discord.gg/daQmY23ym">Discord</a>
+  &nbsp;&middot;&nbsp;<a href="https://discord.gg/daQmY23ym"><img alt="Discord" src="../.github/discord.svg" height="20"></a>
 </p>
