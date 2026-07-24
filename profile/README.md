@@ -29,7 +29,7 @@ there means a weekend of pasted Reddit compose files, six web UIs, hand-copied A
 keys, and a nagging doubt that your VPN is actually hiding your IP. Then it breaks
 in a way nothing warns you about, and you never touch it again.
 
-**lemonfiber is one small binary that does all of that for you** — and then keeps
+**Lemonfiber is one small binary that does all of that for you** — and then keeps
 watch.
 
 ```console
@@ -59,9 +59,9 @@ $ lemonfiber up full        # the lot.
 <td width="33%" valign="top">
 
 ### 🍋 Genuinely open
-No Plex, no paid tier, no phone-home. Every service is open-source and runs on
-**your** hardware. Jellyfin, the *arr apps, Seerr — the good stuff, all of it
-yours.
+No closed-source media server, no paid tier, no phone-home. Every service is
+open-source and runs on **your** hardware. Jellyfin, the *arr apps, Seerr — the
+good stuff, all of it yours.
 
 </td>
 <td width="33%" valign="top">
@@ -83,7 +83,7 @@ your VPN isn't leaking. Silence means healthy — and it means it.
 
 ## Set up once, everyone else just watches
 
-You run the setup. Your household never sees lemonfiber at all — they get **one
+You run the setup. Your household never sees Lemonfiber at all — they get **one
 link, one account**: ask for something in Seerr, and it turns up in Jellyfin on
 the TV. That's the whole experience.
 
@@ -96,7 +96,7 @@ Recyclarr · Homepage — 19 services, pinned and wired together automatically.
 ## Status
 
 **The specification is complete; the code is being built in the open.**
-lemonfiber is spec-first — every decision is written down and argued for before a
+Lemonfiber is spec-first — every decision is written down and argued for before a
 line is written. Watch it come together, or help build it.
 
 - 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — 795 requirements, and the *why* behind every one
