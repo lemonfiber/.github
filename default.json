@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":semanticCommits", ":pinAllExceptPeerDependencies"],
+  "commitBody": "Spec: GOV-R12",
+  "prBodyNotes": [
+    "This is a routine dependency update. Per lemonfiber governance it cites `Spec: GOV-R12`, so it passes `spec-check` automatically."
+  ],
+  "labels": ["dependencies"],
+  "packageRules": [
+    { "matchUpdateTypes": ["minor", "patch"], "groupName": "non-major dependencies" }
+  ]
+}

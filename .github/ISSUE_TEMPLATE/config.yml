@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Community & questions
+    url: https://discord.gg/daQmY23ym
+    about: Ask questions and chat with the community on Discord.
+  - name: Feature requests
+    url: https://github.com/lemonfiber/spec/issues/new
+    about: A feature request is a proposed spec change — please open it against the spec repo.
+  - name: Security vulnerabilities
+    url: https://github.com/lemonfiber/spec/blob/main/40-quality/security.md
+    about: Do not file security issues publicly. Use private vulnerability reporting.

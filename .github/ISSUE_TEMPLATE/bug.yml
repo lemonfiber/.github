@@ -1,0 +1,55 @@
+name: Bug report
+description: Something behaves differently from what the spec describes.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug is behaviour that contradicts the spec. If the spec doesn't cover
+        the case, it's a gap — open a spec issue instead. Not sure which repo?
+        File here anyway; routing is our job.
+  - type: input
+    id: repo-version
+    attributes:
+      label: Repo & version
+      placeholder: "cli 0.4.0 / media-stack @ tag / brand 0.2.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you observe?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: If you know the spec requirement this contradicts, cite it (e.g. C2-R7).
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Linux (native Docker)
+        - Linux (Docker Desktop)
+        - Windows (WSL2)
+        - Not applicable
+    validations:
+      required: false
+  - type: textarea
+    id: doctor
+    attributes:
+      label: "`lemonfiber doctor` output (if relevant)"
+      description: Redact anything sensitive; the support bundle redacts for you.
+      render: shell
