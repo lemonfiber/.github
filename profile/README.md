@@ -103,6 +103,20 @@ line is written. Watch it come together, or help build it.
 - 🗺️ **[The roadmap](https://github.com/lemonfiber/spec/blob/main/00-overview/roadmap.md)**
 - 💬 **[Join the Discord](https://discord.gg/daQmY23ym)**
 
+## Want to help?
+
+You don't need to write code — or even be especially technical:
+
+- 🧪 **Try it and tell us what broke.** Once there's something to run, bug reports and rough edges are gold.
+- 📝 **Improve the docs.** Something unclear? Fix it — every repo's docs are open, and a docs PR is a real contribution.
+- 🎨 **Design & UX.** The web UI and the brand welcome a good eye.
+- 💬 **Hang out on [Discord](https://discord.gg/daQmY23ym).** Answer a question, share your setup, help shape the roadmap.
+- ⭐ **Spread the word.** A star or a mention genuinely helps a young project find people.
+
+Prefer to write code? The [spec](https://github.com/lemonfiber/spec) is complete
+and the roadmap is open — start with a
+[good first issue](https://github.com/lemonfiber/lemonfiber/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+
 ## The repos
 
 | | |

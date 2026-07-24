@@ -1,7 +1,21 @@
-# Contributing to lemonfiber
+# Contributing to Lemonfiber
 
 Thank you for wanting to contribute. This project works a little differently from
 most, and understanding the one core rule up front will save you a round-trip.
+
+## You don't have to write code
+
+The most valuable contributions often aren't code:
+
+- **Try it and report what broke** — clear bug reports save everyone time.
+- **Fix or improve docs** — spot something unclear and fix it; a docs PR counts.
+- **Design & UX feedback** — on the web UI or the brand.
+- **Help others** on [Discord](https://discord.gg/daQmY23ym), and shape the roadmap.
+- **Spread the word** — a star or a mention helps a young project.
+
+Non-code changes still follow the one rule below (they cite a spec identifier, or
+`GOV-R12` for routine docs), but they're just as welcome as code. If you're not
+sure how to file something, ask on Discord — we'll help.
 
 ## The one rule
 

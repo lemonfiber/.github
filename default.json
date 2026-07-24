@@ -1,12 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommits", ":pinAllExceptPeerDependencies"],
-  "commitBody": "Spec: GOV-R12",
+  "extends": ["config:recommended", ":semanticCommits", ":pinAllExceptPeerDependencies", "helpers:pinGitHubActionDigests"],
+  "commitBody": "Spec: GOV-R12\n\nSigned-off-by: Wessel Verheij <info@nightworks.io>",
   "prBodyNotes": [
-    "This is a routine dependency update. Per lemonfiber governance it cites `Spec: GOV-R12`, so it passes `spec-check` automatically."
+    "Routine dependency update — cites `Spec: GOV-R12`, so it passes spec-check automatically."
   ],
   "labels": ["dependencies"],
   "packageRules": [
-    { "matchUpdateTypes": ["minor", "patch"], "groupName": "non-major dependencies" }
+    { "matchUpdateTypes": ["minor", "patch", "digest"], "groupName": "non-major dependencies" }
   ]
 }
