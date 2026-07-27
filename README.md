@@ -4,6 +4,10 @@ Org-wide community health files, inherited by every repository in the
 [lemonfiber](https://github.com/lemonfiber) organisation. Maintained here once so
 they never drift between repos.
 
+<p align="center">
+  <a href="https://scorecard.dev/viewer/?uri=github.com/lemonfiber/.github"><img alt="OpenSSF Scorecard" src="https://api.scorecard.dev/projects/github.com/lemonfiber/.github/badge"></a>
+</p>
+
 | File | Applies to |
 | ---- | ---------- |
 | `profile/README.md` | The org profile page |
