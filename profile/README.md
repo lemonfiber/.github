@@ -45,11 +45,11 @@ $ lemonfiber
 Not "all sixteen services or nothing." Named **forms** boot exactly the slice you
 want — the rest stays off.
 
-```console
-$ lemonfiber up search      # just find things.  3 containers.
-$ lemonfiber up dl          # just download a link you have.
-$ lemonfiber up tv          # search → download → organise → subtitle.
-$ lemonfiber up full        # the lot.
+```bash
+lemonfiber up search      # just find things.  3 containers.
+lemonfiber up dl          # just download a link you have.
+lemonfiber up tv          # search → download → organise → subtitle.
+lemonfiber up full        # the lot.
 ```
 
 ## Three promises
@@ -59,6 +59,7 @@ $ lemonfiber up full        # the lot.
 <td width="33%" valign="top">
 
 ### 🍋 Genuinely open
+
 No closed-source media server, no paid tier, no phone-home. Every service is
 open-source and runs on **your** hardware. Jellyfin, the *arr apps, Seerr — the
 good stuff, all of it yours.
@@ -67,6 +68,7 @@ good stuff, all of it yours.
 <td width="33%" valign="top">
 
 ### ✂️ Runs in slices
+
 "Just search." "Just download." "Everything." One config, one data folder, no
 separate installs — boot the shape that fits the moment.
 
@@ -74,6 +76,7 @@ separate installs — boot the shape that fits the moment.
 <td width="33%" valign="top">
 
 ### 🔒 Correct by construction
+
 It **tests** hardlinks instead of assuming them. It compares public IPs to *prove*
 your VPN isn't leaking. Silence means healthy — and it means it.
 
@@ -120,7 +123,7 @@ and the roadmap is open — start with a
 ## The repos
 
 | | |
-|---|---|
+| --- | --- |
 | **[spec](https://github.com/lemonfiber/spec)** | The canonical specification — everything starts here |
 | **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` binary (Rust) |
 | **[media-stack](https://github.com/lemonfiber/media-stack)** | The Compose stack it orchestrates |
