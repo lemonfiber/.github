@@ -124,6 +124,7 @@ and the roadmap is open — start with a
 | **[spec](https://github.com/lemonfiber/spec)** | The canonical specification — everything starts here |
 | **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` binary (Rust) |
 | **[media-stack](https://github.com/lemonfiber/media-stack)** | The Compose stack it orchestrates |
+| **[website](https://github.com/lemonfiber/website)** | The frontpage — built from the org itself |
 | **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type |
 | **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
 
