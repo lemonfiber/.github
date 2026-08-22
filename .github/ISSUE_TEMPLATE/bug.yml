@@ -12,7 +12,7 @@ body:
     id: repo-version
     attributes:
       label: Repo & version
-      placeholder: "cli 0.4.0 / media-stack @ tag / brand 0.2.0"
+      placeholder: "lemonfiber 0.8.0 / media-stack @ tag / brand 0.2.0"
     validations:
       required: true
   - type: textarea

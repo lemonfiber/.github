@@ -30,7 +30,8 @@ valuable.
 ## Scope
 
 In scope: the `lemonfiber` binary, the stack definitions, credential handling, the
-VPN isolation path, and the web UI.
+VPN isolation path, the local HTTP API and the clients that speak to it, and the
+web UI.
 
 Out of scope (stated in the threat model, not defended): nation-state adversaries,
 physical access to the host, a compromised host operating system, and a malicious
