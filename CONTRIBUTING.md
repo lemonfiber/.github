@@ -10,7 +10,7 @@ The most valuable contributions often aren't code:
 - **Try it and report what broke** — clear bug reports save everyone time.
 - **Fix or improve docs** — spot something unclear and fix it; a docs PR counts.
 - **Design & UX feedback** — on the web UI or the brand.
-- **Help others** on [Discord](https://discord.gg/FYuV9CbTHR), and shape the roadmap.
+- **Help others** on [Discord](https://discord.nightworks.io), and shape the roadmap.
 - **Spread the word** — a star or a mention helps a young project.
 
 Non-code changes still follow the one rule below (they cite a spec identifier, or
@@ -63,5 +63,5 @@ one click).
 
 ## Questions
 
-Ask in [Discord](https://discord.gg/FYuV9CbTHR), or open an issue. If you're unsure
+Ask in [Discord](https://discord.nightworks.io), or open an issue. If you're unsure
 which repo an issue belongs in, file it anywhere — routing is our job, not yours.
