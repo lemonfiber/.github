@@ -23,9 +23,10 @@ sure how to file something, ask on Discord — we'll help.
 something in it that already exists.**
 
 A specification that trails its implementation is useless — so here the spec leads.
-Every commit to an implementation repo — `lemonfiber`, `media-stack`,
-`lemonfiber-web`, `sdk-ts`, `sdk-php`, `brand`, `website`, `homebrew-tap` and this
-one — references a spec identifier (a requirement like `A2-R4`, an `ADR-0006`, or
+Every commit to an implementation repo — `lemonfiber`, `lemonfiber-media-stack`,
+`lemonfiber-web`, `sdk-ts`, `sdk-php`, `brand`, `website-lemonfiber.app`,
+`website-docs.lemonfiber.app`, `homebrew-tap` and this one — references a spec
+identifier (a requirement like `A2-R4`, an `ADR-0006`, or
 a governance rule like `GOV-R12`), and that identifier must already be merged in
 the spec.
 
