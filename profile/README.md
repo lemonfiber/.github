@@ -16,7 +16,7 @@
 <p align="center">
   <a href="https://discord.nightworks.io"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
   <img alt="Licence" src="https://img.shields.io/badge/licence-Hippocratic%203.0-17160F">
-  <img alt="Status" src="https://img.shields.io/badge/status-v0.8.0%20%C2%B7%20building%20in%20the%20open-F0C419?labelColor=17160F">
+  <img alt="Status" src="https://img.shields.io/badge/status-building%20in%20the%20open-F0C419?labelColor=17160F">
   <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux%20%C2%B7%20Windows-E07A17?labelColor=17160F">
 </p>
 
@@ -98,12 +98,12 @@ Recyclarr · Homepage — 19 services, pinned and wired together automatically.
 
 ## Status
 
-**The specification is complete, and the binary ships — `v0.8.0` is out.**
+**The specification is complete, and the binary ships.**
 Lemonfiber is spec-first — every decision is written down and argued for before a
 line is written. Watch it come together, or help build it.
 
-- 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — 926 requirements, and the *why* behind every one
-- 🗺️ **[The roadmap](https://github.com/lemonfiber/spec/blob/main/00-overview/roadmap.md)**
+- 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — every requirement, and the *why* behind every one
+- 🗺️ **[The roadmap](https://github.com/lemonfiber/spec/blob/main/00-overview/roadmap.md)**, and the [releases](https://github.com/lemonfiber/lemonfiber/releases) that say where it has reached
 - 💬 **[Join the Discord](https://discord.nightworks.io)**
 
 ## Want to help?
