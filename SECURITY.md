@@ -6,7 +6,7 @@
 
 Instead, use GitHub's private vulnerability reporting on the affected repository
 (the **Security** tab → **Report a vulnerability**), or reach the maintainers
-privately via [Discord](https://discord.gg/FYuV9CbTHR).
+privately via [Discord](https://discord.nightworks.io).
 
 Include, where you can:
 

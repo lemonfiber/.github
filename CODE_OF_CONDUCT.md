@@ -34,7 +34,7 @@ Examples of unacceptable behaviour:
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behaviour may be
-reported to the maintainers through [Discord](https://discord.gg/FYuV9CbTHR) or by
+reported to the maintainers through [Discord](https://discord.nightworks.io) or by
 the private security/contact path in each repository. All complaints will be
 reviewed and investigated promptly and fairly.
 

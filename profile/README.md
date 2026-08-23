@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/FYuV9CbTHR"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
+  <a href="https://discord.nightworks.io"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
   <img alt="Licence" src="https://img.shields.io/badge/licence-Hippocratic%203.0-17160F">
   <img alt="Status" src="https://img.shields.io/badge/status-v0.8.0%20%C2%B7%20building%20in%20the%20open-F0C419?labelColor=17160F">
   <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux%20%C2%B7%20Windows-E07A17?labelColor=17160F">
@@ -104,7 +104,7 @@ line is written. Watch it come together, or help build it.
 
 - 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — 926 requirements, and the *why* behind every one
 - 🗺️ **[The roadmap](https://github.com/lemonfiber/spec/blob/main/00-overview/roadmap.md)**
-- 💬 **[Join the Discord](https://discord.gg/FYuV9CbTHR)**
+- 💬 **[Join the Discord](https://discord.nightworks.io)**
 
 ## Want to help?
 
@@ -113,7 +113,7 @@ You don't need to write code — or even be especially technical:
 - 🧪 **Try it and tell us what broke.** There is something to run now — bug reports and rough edges are gold.
 - 📝 **Improve the docs.** Something unclear? Fix it — every repo's docs are open, and a docs PR is a real contribution.
 - 🎨 **Design & UX.** The web UI and the brand welcome a good eye.
-- 💬 **Hang out on [Discord](https://discord.gg/FYuV9CbTHR).** Answer a question, share your setup, help shape the roadmap.
+- 💬 **Hang out on [Discord](https://discord.nightworks.io).** Answer a question, share your setup, help shape the roadmap.
 - ⭐ **Spread the word.** A star or a mention genuinely helps a young project find people.
 
 Prefer to write code? The [spec](https://github.com/lemonfiber/spec) is complete
@@ -146,5 +146,5 @@ The last three are being built and are not published yet.
       <img alt="NightWorks.io" src="../.github/nightworks-dark.png" height="20">
     </picture>
   </a>
-  &nbsp;&middot;&nbsp;<a href="https://discord.gg/FYuV9CbTHR"><img alt="Discord" src="../.github/discord.svg" height="20"></a>
+  &nbsp;&middot;&nbsp;<a href="https://discord.nightworks.io"><img alt="Discord" src="../.github/discord.svg" height="20"></a>
 </p>
