@@ -1,0 +1,80 @@
+# A self-hosted Renovate run, kept as a fallback. NOT SCHEDULED ON PURPOSE.
+#
+# The hosted Mend app is the org's Renovate and reads the same preset from
+# `default.json`. Two Renovates against the same repositories would open the same
+# pull requests twice, which is worse than none — so this has no `schedule:` and
+# runs only when someone dispatches it.
+#
+# Use it when the hosted app is not running and the org needs a bump anyway: run
+# it once with `dry_run: full` and read the log, then again with `dry_run: off`.
+# If it is ever made the permanent mechanism, uninstall the hosted app first and
+# only then add a `schedule:` here.
+name: renovate
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run mode. 'off' actually opens pull requests."
+        type: choice
+        default: "full"
+        options: ["full", "lookup", "extract", "off"]
+      log_level:
+        description: "Renovate log level."
+        type: choice
+        default: "info"
+        options: ["info", "debug"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: renovate
+  cancel-in-progress: false
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      # Cross-repo work needs an org-wide identity: the default GITHUB_TOKEN
+      # reaches only the repository the workflow runs in. This is the release
+      # train's App (OPS-R38), already installed across the org.
+      - name: Mint the App token
+        id: token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.RELEASE_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_APP_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Choose the run mode
+        env:
+          MODE: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          # An empty RENOVATE_DRY_RUN fails config validation, so it is written
+          # only when a mode was actually chosen.
+          if [ -n "${MODE:-}" ] && [ "${MODE}" != "off" ]; then
+            echo "RENOVATE_DRY_RUN=${MODE}" >> "$GITHUB_ENV"
+          fi
+
+      - name: Renovate
+        uses: renovatebot/github-action@e09d604f8f803bb527bd8321ed5be06c460b8682 # v46.2.2
+        env:
+          LOG_LEVEL: ${{ inputs.log_level || 'info' }}
+          RENOVATE_PLATFORM: github
+          RENOVATE_AUTODISCOVER: "true"
+          RENOVATE_AUTODISCOVER_FILTER: "lemonfiber/*"
+          # GitHub refuses an unsigned commit on a branch protected for
+          # signatures, and a runner holds no key. Committing through the API
+          # instead means GitHub authors and signs it, so the PRs are mergeable.
+          RENOVATE_PLATFORM_COMMIT: "enabled"
+          RENOVATE_GIT_AUTHOR: "lemonfiber-release-train[bot] <309230719+lemonfiber-release-train[bot]@users.noreply.github.com>"
+          RENOVATE_ONBOARDING: "true"
+          RENOVATE_ONBOARDING_CONFIG: '{"$schema":"https://docs.renovatebot.com/renovate-schema.json","extends":["local>lemonfiber/.github"]}'
+          # A first live run would otherwise open every update at once.
+          RENOVATE_PR_CONCURRENT_LIMIT: "5"
+          RENOVATE_PR_HOURLY_LIMIT: "3"
+        with:
+          token: ${{ steps.token.outputs.token }}

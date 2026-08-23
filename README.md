@@ -1,8 +1,8 @@
 # lemonfiber/.github
 
-Org-wide community health files, inherited by every repository in the
-[lemonfiber](https://github.com/lemonfiber) organisation. Maintained here once so
-they never drift between repos.
+Org-wide community health files and the org's dependency policy, inherited by
+every repository in the [lemonfiber](https://github.com/lemonfiber) organisation.
+Maintained here once so they never drift between repos.
 
 <p align="center">
   <a href="https://scorecard.dev/viewer/?uri=github.com/lemonfiber/.github"><img alt="OpenSSF Scorecard" src="https://api.scorecard.dev/projects/github.com/lemonfiber/.github/badge"></a>
@@ -16,6 +16,8 @@ they never drift between repos.
 | `SECURITY.md` | Every repo |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Every repo's PRs |
 | `.github/ISSUE_TEMPLATE/` | Every repo's issues |
+| `default.json` | Every repo's Renovate config, via `"extends": ["github>lemonfiber/.github"]` |
+| `typos.toml`, `.markdownlint.jsonc` | The hygiene gate's shared rules |
 
 These are canonical here. The governance *rules* they reflect live in
 [lemonfiber/spec/50-governance](https://github.com/lemonfiber/spec/tree/main/50-governance);

@@ -16,7 +16,7 @@
 <p align="center">
   <a href="https://discord.gg/FYuV9CbTHR"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
   <img alt="Licence" src="https://img.shields.io/badge/licence-Hippocratic%203.0-17160F">
-  <img alt="Status" src="https://img.shields.io/badge/status-spec%20complete%20%C2%B7%20building-F0C419?labelColor=17160F">
+  <img alt="Status" src="https://img.shields.io/badge/status-v0.8.0%20%C2%B7%20building%20in%20the%20open-F0C419?labelColor=17160F">
   <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux%20%C2%B7%20Windows-E07A17?labelColor=17160F">
 </p>
 
@@ -98,11 +98,11 @@ Recyclarr · Homepage — 19 services, pinned and wired together automatically.
 
 ## Status
 
-**The specification is complete; the code is being built in the open.**
+**The specification is complete, and the binary ships — `v0.8.0` is out.**
 Lemonfiber is spec-first — every decision is written down and argued for before a
 line is written. Watch it come together, or help build it.
 
-- 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — 795 requirements, and the *why* behind every one
+- 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — 926 requirements, and the *why* behind every one
 - 🗺️ **[The roadmap](https://github.com/lemonfiber/spec/blob/main/00-overview/roadmap.md)**
 - 💬 **[Join the Discord](https://discord.gg/FYuV9CbTHR)**
 
@@ -110,7 +110,7 @@ line is written. Watch it come together, or help build it.
 
 You don't need to write code — or even be especially technical:
 
-- 🧪 **Try it and tell us what broke.** Once there's something to run, bug reports and rough edges are gold.
+- 🧪 **Try it and tell us what broke.** There is something to run now — bug reports and rough edges are gold.
 - 📝 **Improve the docs.** Something unclear? Fix it — every repo's docs are open, and a docs PR is a real contribution.
 - 🎨 **Design & UX.** The web UI and the brand welcome a good eye.
 - 💬 **Hang out on [Discord](https://discord.gg/FYuV9CbTHR).** Answer a question, share your setup, help shape the roadmap.
@@ -130,6 +130,12 @@ and the roadmap is open — start with a
 | **[website](https://github.com/lemonfiber/website)** | The frontpage — built from the org itself |
 | **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type |
 | **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
+| **[.github](https://github.com/lemonfiber/.github)** | This repo — community health files and the dependency policy |
+| `lemonfiber-web` | The web surface, over the binary's local HTTP API |
+| `sdk-ts` | The TypeScript API client |
+| `sdk-php` | The PHP API client |
+
+The last three are being built and are not published yet.
 
 ---
 
