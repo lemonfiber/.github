@@ -126,16 +126,17 @@ and the roadmap is open — start with a
 | --- | --- |
 | **[spec](https://github.com/lemonfiber/spec)** | The canonical specification — everything starts here |
 | **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` binary (Rust) |
-| **[media-stack](https://github.com/lemonfiber/media-stack)** | The Compose stack it orchestrates |
-| **[website](https://github.com/lemonfiber/website)** | The frontpage — built from the org itself |
+| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The Compose stack it orchestrates |
+| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The web surface, over the binary's local HTTP API |
+| **[sdk-ts](https://github.com/lemonfiber/sdk-ts)** | The TypeScript API client |
+| **[sdk-php](https://github.com/lemonfiber/sdk-php)** | The PHP API client |
+| **[website-lemonfiber.app](https://github.com/lemonfiber/website-lemonfiber.app)** | The frontpage — built from the org itself |
+| **[website-docs.lemonfiber.app](https://github.com/lemonfiber/website-docs.lemonfiber.app)** | The documentation site — a renderer over the spec and the repos' own docs |
 | **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type |
 | **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
 | **[.github](https://github.com/lemonfiber/.github)** | This repo — community health files and the dependency policy |
-| `lemonfiber-web` | The web surface, over the binary's local HTTP API |
-| `sdk-ts` | The TypeScript API client |
-| `sdk-php` | The PHP API client |
 
-The last three are being built and are not published yet.
+The documentation site is a placeholder; the other ten carry code or content.
 
 ---
 
