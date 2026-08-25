@@ -1,8 +1,11 @@
 # lemonfiber/.github
 
-Org-wide community health files and the org's dependency policy, inherited by
-every repository in the [lemonfiber](https://github.com/lemonfiber) organisation.
-Maintained here once so they never drift between repos.
+Org-wide community health files, inherited by every repository in the
+[lemonfiber](https://github.com/lemonfiber) organisation. Maintained here once so
+they never drift between repos.
+
+Dependency policy is no longer among them: Dependabot has no org-level preset, so
+each repo carries its own `.github/dependabot.yml`.
 
 <p align="center">
   <a href="https://scorecard.dev/viewer/?uri=github.com/lemonfiber/.github"><img alt="OpenSSF Scorecard" src="https://api.scorecard.dev/projects/github.com/lemonfiber/.github/badge"></a>
@@ -17,7 +20,8 @@ Maintained here once so they never drift between repos.
 | `SUPPORT.md` | Every repo without its own |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Every repo's PRs |
 | `.github/ISSUE_TEMPLATE/` | Every repo's issues |
-| `default.json` | Every repo's Renovate config, via `"extends": ["github>lemonfiber/.github"]` |
+| `.github/dependabot.yml` | **This repo only.** Dependabot cannot extend a shared preset, so every repo carries its own (spec `ADR-0016`) |
+| `default.json` | The retired Renovate preset. Four repos still extend it — `brand`, `homebrew-tap`, `lemonfiber-media-stack`, `website-lemonfiber.app` — and it goes when the last of them has a `dependabot.yml` |
 | `typos.toml`, `.markdownlint.jsonc` | **This repo only**, and copied from `lemonfiber/spec` — see below |
 
 These are canonical here. The governance *rules* they reflect live in
