@@ -134,7 +134,7 @@ and the roadmap is open — start with a
 | **[website-docs.lemonfiber.app](https://github.com/lemonfiber/website-docs.lemonfiber.app)** | The documentation site — a renderer over the spec and the repos' own docs |
 | **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type |
 | **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
-| **[.github](https://github.com/lemonfiber/.github)** | This repo — community health files and the dependency policy |
+| **[.github](https://github.com/lemonfiber/.github)** | This repo — the org's community health files |
 
 The documentation site is a placeholder; the other ten carry code or content.
 

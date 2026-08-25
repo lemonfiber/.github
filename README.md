@@ -21,7 +21,6 @@ each repo carries its own `.github/dependabot.yml`.
 | `.github/PULL_REQUEST_TEMPLATE.md` | Every repo's PRs |
 | `.github/ISSUE_TEMPLATE/` | Every repo's issues |
 | `.github/dependabot.yml` | **This repo only.** Dependabot cannot extend a shared preset, so every repo carries its own (spec `ADR-0016`) |
-| `default.json` | The retired Renovate preset. Four repos still extend it — `brand`, `homebrew-tap`, `lemonfiber-media-stack`, `website-lemonfiber.app` — and it goes when the last of them has a `dependabot.yml` |
 | `typos.toml`, `.markdownlint.jsonc` | **This repo only**, and copied from `lemonfiber/spec` — see below |
 
 These are canonical here. The governance *rules* they reflect live in
