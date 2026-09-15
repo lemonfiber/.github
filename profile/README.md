@@ -42,7 +42,7 @@ $ lemonfiber
 
 ## Run only the part you need
 
-Not "all sixteen services or nothing." Named **forms** boot exactly the slice you
+Not "all twenty services or nothing." Named **forms** boot exactly the slice you
 want — the rest stays off.
 
 ```bash
@@ -90,11 +90,26 @@ You run the setup. Your household never sees Lemonfiber at all — they get **on
 link, one account**: ask for something in Seerr, and it turns up in Jellyfin on
 the TV. That's the whole experience.
 
+## And on the phone, when you are not at the machine
+
+The CLI, the TUI and the web UI all run on the machine the stack runs on. That is
+the right place to set it up and the wrong place to be standing when the
+downloads stop at eleven at night.
+
+The **companion** is the fourth surface: it pairs with a machine over your own
+network, pins the certificate that machine presents, and shows what is running,
+what stopped, and what the household asked for. It is one app serving two
+people — which one it is for is decided by the credential that signs in, never
+by which build was installed. Setup still happens at the machine; a phone cannot
+perform the act that makes a phone able to perform acts.
+
 ## What's inside
 
-Prowlarr · SABnzbd · qBittorrent (VPN-isolated) · Sonarr · Radarr · Lidarr ·
-Bindery · Bazarr · **Jellyfin** · **Seerr** · Calibre-Web · Audiobookshelf ·
-Recyclarr · Homepage — 19 services, pinned and wired together automatically.
+Prowlarr · FlareSolverr · NZBHydra2 · SABnzbd · Gluetun · qBittorrent
+(VPN-isolated) · Sonarr · Radarr · Lidarr · Bindery · Bazarr · **Jellyfin** ·
+**Seerr** · Calibre-Web-Automated · Audiobookshelf · Navidrome · Recyclarr ·
+Unpackerr · Homepage · Caddy — twenty services, pinned and wired together
+automatically.
 
 ## Status
 
@@ -122,19 +137,75 @@ and the roadmap is open — start with a
 
 ## The repos
 
+Grouped by what they are for, because a single list of fifteen tells you where
+nothing is.
+
+### The specification
+
+Everything starts here. Nothing is built that is not written down first.
+
 | | |
 | --- | --- |
-| **[spec](https://github.com/lemonfiber/spec)** | The canonical specification — everything starts here |
-| **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` binary (Rust) |
-| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The Compose stack it orchestrates |
-| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The web surface, over the binary's local HTTP API |
-| **[sdk-ts](https://github.com/lemonfiber/sdk-ts)** | The TypeScript API client |
-| **[sdk-php](https://github.com/lemonfiber/sdk-php)** | The PHP API client |
-| **[website-lemonfiber.app](https://github.com/lemonfiber/website-lemonfiber.app)** | The frontpage — built from the org itself |
-| **[website-docs.lemonfiber.app](https://github.com/lemonfiber/website-docs.lemonfiber.app)** | The documentation site — a renderer over the spec and the repos' own docs |
-| **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type |
+| **[spec](https://github.com/lemonfiber/spec)** | Every requirement, and the argument behind each one |
+
+### What runs
+
+| | |
+| --- | --- |
+| **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The binary — CLI, TUI and the local HTTP API the surfaces read (Rust) |
+| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The twenty-service Compose stack it orchestrates, pinned by digest |
+
+### The surfaces
+
+Four ways to reach one machine. Each renders the core's answers and decides
+nothing the core has not already decided.
+
+| | |
+| --- | --- |
+| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The operator console and the household view, over the local API |
+| **[lemonfiber-companion](https://github.com/lemonfiber/lemonfiber-companion)** | The phone, on the network rather than on the host — Blade compiled to SwiftUI and Jetpack Compose, no web view |
+
+The CLI and the TUI are the binary's own and live with it.
+
+### Extending it
+
+A plugin is declarative data — a manifest, its recorded responses, and the
+proofs those responses satisfy. Nothing in one is executable, and nothing in one
+can be.
+
+| | |
+| --- | --- |
+| **[plugin-template](https://github.com/lemonfiber/plugin-template)** | The one an author copies. It validates and proves unmodified |
+| **[plugin-komga](https://github.com/lemonfiber/plugin-komga)** | Komga — comics and manga |
+| **[plugin-uptime-kuma](https://github.com/lemonfiber/plugin-uptime-kuma)** | Uptime Kuma — endpoint monitoring |
+| **[lemonfiber-plugins](https://github.com/lemonfiber/lemonfiber-plugins)** | Where a plugin is registered to be found. Publishing one needs nothing but a git repository; the registry is a convenience and a review, never a dependency |
+
+### Talking to it
+
+| | |
+| --- | --- |
+| **[sdk-ts](https://github.com/lemonfiber/sdk-ts)** | The TypeScript client, generated from the contract |
+| **[sdk-php](https://github.com/lemonfiber/sdk-php)** | The PHP client, generated from the same one |
+
+### Getting it
+
+| | |
+| --- | --- |
 | **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
-| **[.github](https://github.com/lemonfiber/.github)** | This repo — the org's community health files |
+
+### The public face
+
+| | |
+| --- | --- |
+| **[website-lemonfiber.app](https://github.com/lemonfiber/website-lemonfiber.app)** | The frontpage, built from this org at build time |
+| **[website-docs.lemonfiber.app](https://github.com/lemonfiber/website-docs.lemonfiber.app)** | The documentation site, rendered over the spec and each repo's own docs |
+| **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type. Marks proprietary; tokens open |
+
+### The org itself
+
+| | |
+| --- | --- |
+| **[.github](https://github.com/lemonfiber/.github)** | These community health files, inherited by every repo above |
 
 The documentation site is a placeholder; the other ten carry code or content.
 
