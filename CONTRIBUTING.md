@@ -57,8 +57,29 @@ It covers finding the right identifier, the change lifecycle, what the CI checks
 and what to do if your PR is closed (it's sequenced, not rejected — reopening is
 one click).
 
+## Turn the hooks on, once per clone
+
+The citation above is one of four things checked about every commit message. The
+other three are a conventional subject, a DCO sign-off, and no credit to the tool
+that wrote it. Each is a separate check that speaks after a push and a red run.
+
+Every repository here carries a `commit-msg` hook that says all four before any
+of that, with the literal line to add. It is off until a clone turns it on:
+
+```sh
+git config core.hooksPath .githooks
+```
+
+Or run whichever of `just ci`, `npm install` or `composer install` that
+repository has — each sets it, because the setting is per-clone local config and
+no commit can carry it.
+
+What the four rules are, and which requirement each serves:
+**[50-governance/contributing.md](https://github.com/lemonfiber/spec/blob/main/50-governance/contributing.md#what-a-commit-message-has-to-carry)**.
+
 ## Before you open a PR
 
+- The hooks are on, so the commit message is already the one CI will accept.
 - Your change cites a spec identifier, in a commit trailer **and** the PR body.
 - If it changed behaviour, the spec PR merged first.
 - Tests pass, and the [definition of done](https://github.com/lemonfiber/spec/blob/main/40-quality/definition-of-done.md) is met.
