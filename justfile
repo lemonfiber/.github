@@ -1,4 +1,4 @@
-# Task runner for the lemonfiber/.github repo. `just` with no argument lists tasks.
+# Task runner for lemonfiber/.github. `just` with no argument lists these.
 default:
     @just --list
 
@@ -8,6 +8,8 @@ default:
 # to hang `core.hooksPath` on the way the other repos do — it is this recipe or
 # nothing, and `ci` depends on it so that running the checks once turns the hooks
 # on for good. The setting is per-clone local config and no commit can carry it.
+#
+# Turn on this clone's git hooks. Once per clone.
 hooks:
     git config core.hooksPath .githooks
     @echo "hooks on: .githooks/commit-msg, .githooks/pre-push"
@@ -28,6 +30,8 @@ hooks:
 #                                              markdownlint-cli2 "**/*.md"` and
 #                                              `actionlint` are the two commands
 #   osv-scanner, gitleaks, label, scorecard    forge-side
+#
+# Spelling and links, which is what CI reads in this tree — not the whole of CI.
 ci: hooks typos links
 
 # Spell check.
