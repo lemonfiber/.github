@@ -17,7 +17,7 @@
   <a href="https://discord.nightworks.io"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
   <img alt="Licence" src="https://img.shields.io/badge/licence-Hippocratic%203.0-17160F">
   <img alt="Status" src="https://img.shields.io/badge/status-building%20in%20the%20open-F0C419?labelColor=17160F">
-  <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux%20%C2%B7%20Windows-E07A17?labelColor=17160F">
+  <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux%20%C2%B7%20Windows%20via%20WSL2-E07A17?labelColor=17160F">
 </p>
 
 ---
@@ -101,7 +101,8 @@ network, pins the certificate that machine presents, and shows what is running,
 what stopped, and what the household asked for. It is one app serving two
 people — which one it is for is decided by the credential that signs in, never
 by which build was installed. Setup still happens at the machine; a phone cannot
-perform the act that makes a phone able to perform acts.
+perform the act that makes a phone able to perform acts. Nothing in its
+repository is versioned or published yet.
 
 ## What's inside
 
@@ -137,7 +138,7 @@ and the roadmap is open — start with a
 
 ## The repos
 
-Grouped by what they are for, because a single list of fifteen tells you where
+Grouped by what they are for, because a single flat list tells you where
 nothing is.
 
 ### The specification
@@ -153,7 +154,7 @@ Everything starts here. Nothing is built that is not written down first.
 | | |
 | --- | --- |
 | **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The binary — CLI, TUI and the local HTTP API the surfaces read (Rust) |
-| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The twenty-service Compose stack it orchestrates, pinned by digest |
+| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The twenty-service Compose stack it orchestrates, every image pinned to a version tag |
 
 ### The surfaces
 
@@ -162,7 +163,7 @@ nothing the core has not already decided.
 
 | | |
 | --- | --- |
-| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The operator console and the household view, over the local API |
+| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The operator console, over the local API. The household view is specified and not built |
 | **[lemonfiber-companion](https://github.com/lemonfiber/lemonfiber-companion)** | The phone, on the network rather than on the host — Blade compiled to SwiftUI and Jetpack Compose, no web view |
 
 The CLI and the TUI are the binary's own and live with it.
@@ -191,7 +192,7 @@ can be.
 
 | | |
 | --- | --- |
-| **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | `brew install` |
+| **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | The Homebrew formula. A placeholder: the release pipeline publishes it from 1.0.0 (`L1-R3`), so `brew install` installs nothing today |
 
 ### The public face
 
@@ -206,8 +207,6 @@ can be.
 | | |
 | --- | --- |
 | **[.github](https://github.com/lemonfiber/.github)** | These community health files, inherited by every repo above |
-
-The documentation site is a placeholder; the other ten carry code or content.
 
 ---
 
