@@ -17,7 +17,7 @@
   <a href="https://discord.nightworks.io"><img alt="Discord" src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white"></a>
   <img alt="Licence" src="https://img.shields.io/badge/licence-Hippocratic%203.0-17160F">
   <img alt="Status" src="https://img.shields.io/badge/status-building%20in%20the%20open-F0C419?labelColor=17160F">
-  <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux%20%C2%B7%20Windows%20via%20WSL2-E07A17?labelColor=17160F">
+  <img alt="Platforms" src="https://img.shields.io/badge/macOS%20%C2%B7%20Linux-E07A17?labelColor=17160F">
 </p>
 
 ---
@@ -40,10 +40,17 @@ $ lemonfiber
   └────────────────────────────────────────────┘
 ```
 
+## Try it
+
+Lemonfiber runs on macOS and Linux and needs Docker.
+[Install it](https://docs.lemonfiber.app/start/install/), run `lemonfiber`, and
+answer the setup questions. [Your first stack](https://docs.lemonfiber.app/start/your-first-stack/)
+walks through it.
+
 ## Run only the part you need
 
-Not "all twenty services or nothing." Named **forms** boot exactly the slice you
-want — the rest stays off.
+Not "all twenty services or nothing." Named **forms** start exactly the part you
+want; the rest stays off.
 
 ```bash
 lemonfiber up search      # just find things.  3 containers.
@@ -90,36 +97,30 @@ You run the setup. Your household never sees Lemonfiber at all — they get **on
 link, one account**: ask for something in Seerr, and it turns up in Jellyfin on
 the TV. That's the whole experience.
 
-## And on the phone, when you are not at the machine
+## Watch and fix it from anywhere in the house
 
-The CLI, the TUI and the web UI all run on the machine the stack runs on. That is
-the right place to set it up and the wrong place to be standing when the
-downloads stop at eleven at night.
-
-The **companion** is the fourth surface: it pairs with a machine over your own
-network, pins the certificate that machine presents, and shows what is running,
-what stopped, and what the household asked for. It is one app serving two
-people — which one it is for is decided by the credential that signs in, never
-by which build was installed. Setup still happens at the machine; a phone cannot
-perform the act that makes a phone able to perform acts. Nothing in its
-repository is versioned or published yet.
+Set it up and run it from the command line, the terminal dashboard or the web
+console on the machine itself. A **companion app** for phones is in
+development: it pairs with your machine over your own network and shows what is
+running, what stopped and what the household asked for.
 
 ## What's inside
 
 Prowlarr · FlareSolverr · NZBHydra2 · SABnzbd · Gluetun · qBittorrent
 (VPN-isolated) · Sonarr · Radarr · Lidarr · Bindery · Bazarr · **Jellyfin** ·
 **Seerr** · Calibre-Web-Automated · Audiobookshelf · Navidrome · Recyclarr ·
-Unpackerr · Homepage · Caddy — twenty services, pinned and wired together
-automatically.
+Unpackerr · Homepage · Caddy: twenty open-source services, each pinned to a
+version and wired together automatically.
 
 ## Status
 
-**The specification is complete, and the binary ships.**
-Lemonfiber is spec-first — every decision is written down and argued for before a
-line is written. Watch it come together, or help build it.
+Lemonfiber is before 1.0, and every release is a pre-release. It is built
+spec-first: every requirement, and the reasoning behind it, is written down
+before the code.
 
-- 📐 **[Read the spec](https://github.com/lemonfiber/spec)** — every requirement, and the *why* behind every one
-- 🗺️ **[The roadmap](https://github.com/lemonfiber/spec/blob/main/00-overview/roadmap.md)**, and the [releases](https://github.com/lemonfiber/lemonfiber/releases) that say where it has reached
+- 📖 **[The documentation](https://docs.lemonfiber.app)**: install, run, fix, and build on it
+- 📐 **[The specification](https://github.com/lemonfiber/spec)**: every requirement, and the *why* behind each one
+- 🗺️ **[The roadmap](https://docs.lemonfiber.app/project/roadmap/)**, and the [releases](https://github.com/lemonfiber/lemonfiber/releases) so far
 - 💬 **[Join the Discord](https://discord.nightworks.io)**
 
 ## Want to help?
@@ -132,14 +133,13 @@ You don't need to write code — or even be especially technical:
 - 💬 **Hang out on [Discord](https://discord.nightworks.io).** Answer a question, share your setup, help shape the roadmap.
 - ⭐ **Spread the word.** A star or a mention genuinely helps a young project find people.
 
-Prefer to write code? The [spec](https://github.com/lemonfiber/spec) is complete
-and the roadmap is open — start with a
+Prefer to write code? Read [how change gets in](https://github.com/lemonfiber/.github/blob/main/CONTRIBUTING.md),
+then start with a
 [good first issue](https://github.com/lemonfiber/lemonfiber/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
 ## The repos
 
-Grouped by what they are for, because a single flat list tells you where
-nothing is.
+Grouped by what they are for.
 
 ### The specification
 
@@ -153,60 +153,65 @@ Everything starts here. Nothing is built that is not written down first.
 
 | | |
 | --- | --- |
-| **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The binary — CLI, TUI and the local HTTP API the surfaces read (Rust) |
-| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The twenty-service Compose stack it orchestrates, every image pinned to a version tag |
+| **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` tool: command line, terminal dashboard, and the local web API everything else talks to (Rust) |
+| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The Docker Compose stack it runs. Works with plain `docker compose` too |
+| **[lemonfiber-request-gate](https://github.com/lemonfiber/lemonfiber-request-gate)** | A small service in the stack that lets Seerr ask Sonarr, Radarr and Jellyfin for a fixed set of things, and nothing more |
+| **[lemonfiber-decline](https://github.com/lemonfiber/lemonfiber-decline)** | A small service in the stack that lets somebody turn down an invitation to the household |
 
-### The surfaces
+### Ways to use it
 
-Four ways to reach one machine. Each renders the core's answers and decides
-nothing the core has not already decided.
+The command line and the terminal dashboard are part of `lemonfiber` itself.
 
 | | |
 | --- | --- |
-| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The operator console, over the local API. The household view is specified and not built |
-| **[lemonfiber-companion](https://github.com/lemonfiber/lemonfiber-companion)** | The phone, on the network rather than on the host — Blade compiled to SwiftUI and Jetpack Compose, no web view |
+| **[lemonfiber-web](https://github.com/lemonfiber/lemonfiber-web)** | The web console for the person who runs the stack, and a view for the rest of the household. `lemonfiber ui` serves it |
+| **[lemonfiber-companion](https://github.com/lemonfiber/lemonfiber-companion)** | The phone app, in development. Native on iOS and Android, no web view |
 
-The CLI and the TUI are the binary's own and live with it.
+### Building on it
+
+| | |
+| --- | --- |
+| **[sdk-ts](https://github.com/lemonfiber/sdk-ts)** | TypeScript client for the local web API |
+| **[sdk-php](https://github.com/lemonfiber/sdk-php)** | PHP client for the same API |
+| **[sdk-python](https://github.com/lemonfiber/sdk-python)** | Python client for the same API, synchronous and asynchronous |
+| **[integration-home-assistant](https://github.com/lemonfiber/integration-home-assistant)** | The stack's health, controls and a member's library in Home Assistant |
+| **[integration-mcp](https://github.com/lemonfiber/integration-mcp)** | An MCP server, so an AI assistant can use the web API through a scoped key |
 
 ### Extending it
 
-A plugin is declarative data — a manifest, its recorded responses, and the
-proofs those responses satisfy. Nothing in one is executable, and nothing in one
-can be.
+A plugin adds a service to the stack as declarative data: a manifest, recorded
+responses, and checks those responses must pass. Nothing in a plugin runs as
+code.
 
 | | |
 | --- | --- |
-| **[plugin-template](https://github.com/lemonfiber/plugin-template)** | The one an author copies. It validates and proves unmodified |
-| **[plugin-komga](https://github.com/lemonfiber/plugin-komga)** | Komga — comics and manga |
-| **[plugin-uptime-kuma](https://github.com/lemonfiber/plugin-uptime-kuma)** | Uptime Kuma — endpoint monitoring |
-| **[lemonfiber-plugins](https://github.com/lemonfiber/lemonfiber-plugins)** | Where a plugin is registered to be found. Publishing one needs nothing but a git repository; the registry is a convenience and a review, never a dependency |
-
-### Talking to it
-
-| | |
-| --- | --- |
-| **[sdk-ts](https://github.com/lemonfiber/sdk-ts)** | The TypeScript client, generated from the contract |
-| **[sdk-php](https://github.com/lemonfiber/sdk-php)** | The PHP client, generated from the same one |
+| **[plugin-template](https://github.com/lemonfiber/plugin-template)** | Copy this to write a plugin. It validates unmodified |
+| **[plugin-komga](https://github.com/lemonfiber/plugin-komga)** | Komga: comics and manga |
+| **[plugin-uptime-kuma](https://github.com/lemonfiber/plugin-uptime-kuma)** | Uptime Kuma: endpoint monitoring |
+| **[plugin-plex](https://github.com/lemonfiber/plugin-plex)** | Plex: a worked example that asks for more than plugins may do today, so it cannot be installed yet |
+| **[lemonfiber-plugins](https://github.com/lemonfiber/lemonfiber-plugins)** | The reviewed catalogue where plugins are listed so people can find them. A plugin needs only a git repository; the catalogue is optional |
 
 ### Getting it
 
 | | |
 | --- | --- |
-| **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | The Homebrew formula. A placeholder: the release pipeline publishes it from 1.0.0 (`L1-R3`), so `brew install` installs nothing today |
+| **[homebrew-tap](https://github.com/lemonfiber/homebrew-tap)** | The Homebrew tap. It holds a placeholder formula, so `brew install` installs nothing yet; use the installer in the [install guide](https://docs.lemonfiber.app/start/install/) |
 
 ### The public face
 
 | | |
 | --- | --- |
-| **[website-lemonfiber.app](https://github.com/lemonfiber/website-lemonfiber.app)** | The frontpage, built from this org at build time |
-| **[website-docs.lemonfiber.app](https://github.com/lemonfiber/website-docs.lemonfiber.app)** | The documentation site, rendered over the spec and each repo's own docs |
-| **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type. Marks proprietary; tokens open |
+| **[website-lemonfiber.app](https://github.com/lemonfiber/website-lemonfiber.app)** | [lemonfiber.app](https://lemonfiber.app), built from this organisation's live state |
+| **[website-docs.lemonfiber.app](https://github.com/lemonfiber/website-docs.lemonfiber.app)** | [docs.lemonfiber.app](https://docs.lemonfiber.app), the documentation and the specification in one site |
+| **[brand](https://github.com/lemonfiber/brand)** | Logo, colour and type. The marks are proprietary; the tokens are open |
 
-### The org itself
+### The organisation
 
 | | |
 | --- | --- |
-| **[.github](https://github.com/lemonfiber/.github)** | These community health files, inherited by every repo above |
+| **[.github](https://github.com/lemonfiber/.github)** | The community health files every repository above inherits |
+
+Lemonfiber is made by [NightWorksIO](https://nightworks.io).
 
 ---
 
