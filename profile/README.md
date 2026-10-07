@@ -34,10 +34,8 @@ watch.
 
 ```console
 $ lemonfiber
-  ┌─ lemonfiber ───────────────────────────────┐
-  │  No configuration found.                   │
-  │  Run first-time setup?             [Y/n]   │
-  └────────────────────────────────────────────┘
+No configuration found.
+Run first-time setup? [Y/n]
 ```
 
 ## Try it
