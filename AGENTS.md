@@ -1,7 +1,11 @@
 # AGENTS.md — .github
 
-> **Common rules for every lemonfiber repo are canonical in the spec:**
-> [50-governance/ai-contributors.md](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md).
+> **Start at the roadmap and board on [lemonfiber.app](https://lemonfiber.app),
+> rendered from the report of where every unreleased version stands. Then the
+> rules** every repository shares:
+> [working in the repositories](https://github.com/lemonfiber/spec/blob/main/50-governance/working-in-the-repositories.md)
+> and [the rules for agents](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md).
+> This file holds only what is true of this repository.
 
 ## What this repo is
 
@@ -18,8 +22,6 @@ just ci
 ```
 
 `typos` and `lychee`, which is everything CI reads in this repository's own
-tree. It turns this clone's git hooks on as its first step, and
-`.githooks/commit-msg` then refuses a commit that CI would refuse — a
-non-conventional subject, a missing sign-off, a missing `Spec:` citation, or a
-trailer crediting an assistant. The jobs `just ci` does not run are named in the
-`justfile` beside the recipe, with what covers each.
+tree. It turns this clone's git hooks on as its first step. The jobs `just ci`
+does not run are named in the `justfile` beside the recipe, with what covers
+each.
