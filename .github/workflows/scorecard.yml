@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   branch_protection_rule:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "43 6 * * 1"
   push:
     branches: [main]
 permissions:
@@ -11,6 +11,7 @@ permissions:
 jobs:
   analysis:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       security-events: write
       id-token: write
