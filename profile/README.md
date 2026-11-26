@@ -152,7 +152,7 @@ Everything starts here. Nothing is built that is not written down first.
 | | |
 | --- | --- |
 | **[lemonfiber](https://github.com/lemonfiber/lemonfiber)** | The `lemonfiber` tool: command line, terminal dashboard, and the local web API everything else talks to (Rust) |
-| **[lemonfiber-media-stack](https://github.com/lemonfiber/lemonfiber-media-stack)** | The Docker Compose stack it runs. Works with plain `docker compose` too |
+| **[lemonfiber-plugins](https://github.com/lemonfiber/lemonfiber-plugins)** | The stack it runs: the bundle, and the first-party plugins it pins, which `lemonfiber` carries in its binary. The same repository is the plugin catalogue below |
 | **[lemonfiber-request-gate](https://github.com/lemonfiber/lemonfiber-request-gate)** | A small service in the stack that lets Seerr ask Sonarr, Radarr and Jellyfin for a fixed set of things, and nothing more |
 | **[lemonfiber-decline](https://github.com/lemonfiber/lemonfiber-decline)** | A small service in the stack that lets somebody turn down an invitation to the household |
 
